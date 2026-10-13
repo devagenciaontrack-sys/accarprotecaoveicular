@@ -484,3 +484,70 @@ h1 span{ display:block; }
 .items b.hot{ background:var(--red-tint); color:var(--red); }
 .hl-card .hl-big{ font-size:60px; line-height:1; margin-bottom:6px; }
 .hl-card .hl-big small{ font-size:22px; }
+
+/* ================= v9 ================= */
+/* topo mais alto no computador: ocupa a primeira tela inteira */
+@media (min-width:960px){
+  .hero{ min-height:calc(100svh - 64px); display:flex; flex-direction:column; justify-content:center; padding-block:56px 56px; }
+  .hero-grid{ gap:40px; }
+  .hero .trust{ margin-top:44px; }
+  .hero-visual{ padding-top:170px; padding-bottom:36px; }
+  .trust li, .trust li:hover{ padding:20px 22px; }
+}
+@media (min-width:960px) and (max-height:760px){ .hero{ min-height:0; } }
+@media (min-width:960px){ .hero-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; } .hero .cta-row{ flex-wrap:nowrap; } .hero .cta-row .btn{ padding-inline:22px; } }
+
+/* ================= revisão do celular ================= */
+@media (max-width:620px){
+  /* topo: carros + cartão compacto; selo de reboque sai (já aparece no cartão) */
+  .hero{ padding-block:20px 28px; }
+  h1{ margin-top:14px; font-size:34px; }
+  .lead{ margin-top:14px; font-size:16px; }
+  .cta-row{ margin-top:20px; }
+  .micro{ margin-top:12px; }
+  .hero-visual{ padding:12px 0 0; margin-inline:0; overflow:visible; }
+  .badge-24{ display:none; }
+  .status{ margin-top:10px; padding:12px 14px 8px; }
+  .status li{ padding:5px 0; font-size:13px; }
+  /* faixa de confiança: 2x2 só com o essencial */
+  .trust{ margin-top:20px; }
+  .trust li, .trust li:hover{ padding:12px; gap:10px; }
+  .trust div span{ display:none; }
+  .trust b{ font-size:14px; line-height:1.25; }
+  .trust div a{ font-size:14px; }
+  .trust-ic .ic{ width:20px; height:20px; }
+
+  section{ padding-block:48px; }
+  .sec-head{ margin-bottom:20px; }
+
+  /* simulador: painel mais enxuto */
+  .sim-panels{ padding:20px; }
+  .panel ul{ margin-top:14px; gap:8px; }
+  .panel-cta{ padding-top:18px; }
+
+  /* vídeo: texto curto, sem lista */
+  .watch-list{ display:none; }
+  .watch .btn{ margin-top:18px; }
+  .watch-grid{ gap:22px; }
+
+  /* coberturas: destaques em linha (ícone à esquerda) */
+  .hl-card{ padding:16px; }
+  .hl-card:not(.hl-red){ display:grid; grid-template-columns:auto 1fr; column-gap:14px; row-gap:2px; }
+  .hl-card:not(.hl-red) .hl-ic{ grid-row:span 2; margin:0; }
+  .hl-card .hl-big{ font-size:48px; }
+  .panel-box{ padding:16px 16px 6px; }
+  .items li{ padding:10px 0; font-size:15px; }
+
+  /* 3 passos: linhas compactas */
+  .steps-list li{ flex-direction:row; align-items:flex-start; text-align:left; gap:14px; padding:16px; }
+  .steps-list .n{ display:none; }
+  .step-ic{ flex:none; width:44px; height:44px; padding:11px; border-radius:12px; }
+  .steps-list p{ margin-inline:0; }
+
+  /* unidades e dúvidas */
+  .units li{ padding:12px 0; }
+  .visit-card{ padding:18px; }
+  .help-card{ padding:18px; }
+  .faq summary{ padding:15px 0; }
+  .final-copy{ padding:28px 22px; }
+}

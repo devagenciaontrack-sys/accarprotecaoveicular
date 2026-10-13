@@ -1,25 +1,23 @@
 # accarprotecaoveicular.com.br — Landing page AC Car Proteção Veicular
 
-Landing page de conversão (HTML/CSS/JS puro, sem build), inspirada no site antigo da AC Car.
+Landing page de conversão (HTML/CSS/JS puro, sem build). Conteúdo e cores do site atual da AC Car; layout novo.
 
 ## Estrutura
-1. Abertura: headline "100% da FIPE" e campo em formato de placa Mercosul que leva ao formulário de cotação
-2. Faixa da dupla: "Pensou proteção, pensou AC Car"
-2. Vídeo do YouTube (carrega só no clique)
-3. Coberturas principais (roubo/furto, colisão PT, terceiros)
-4. Assistência 24h
-5. Diferenciais (sem análise de perfil, cota 5% FIPE, unidades)
-6. Como funciona (3 passos)
-7. Depoimentos
-8. Formulário de cotação → abre o WhatsApp do consultor com os dados preenchidos
-9. Dúvidas, CTA final, rodapé com unidades
+1. Hero: headline, CTA de cotação + WhatsApp, frota de carros e cartão "Proteção ativa"
+2. Simulador "E se acontecer com você amanhã?" (abas por situação: roubo, perda total, terceiros, pane, vidros, chave/pneu)
+3. Vídeo do YouTube com contexto (carrega só no clique)
+4. Coberturas completas (proteção do veículo + assistência 24h)
+5. Como funciona (3 passos)
+6. Confiança: história e 5 unidades (depoimentos prontos, ocultos até serem preenchidos)
+7. Formulário de cotação → abre o WhatsApp do consultor com os dados
+8. Dúvidas, CTA final, rodapé
+- Barra fixa no celular: "Cotar grátis" + WhatsApp
 
 ## Rastreamento (dataLayer / gtag / Meta Pixel)
-`accar_cta_click`, `accar_whatsapp_click`, `accar_instagram_click`, `accar_video_play`, `accar_plate_submit`, `accar_form_start`, `accar_form_submit`
+`accar_cta_click`, `accar_whatsapp_click`, `accar_instagram_click`, `accar_simulator_select`, `accar_video_play`, `accar_form_start`, `accar_form_submit`
 
 ## Pendências
-- [ ] ID do vídeo do YouTube em `data-video-id` (index.html, seção VÍDEO — o espaço já está pronto)
-- [ ] Depoimentos reais de associados (seção DEPOIMENTOS)
+- [ ] ID do vídeo do YouTube em `data-video-id` (index.html, seção VÍDEO)
+- [ ] Depoimentos reais (seção CONFIANÇA: preencher e remover o atributo `hidden`)
 - [ ] Texto oficial da Política de Privacidade
-- [ ] Tags do Google / Meta, se houver
 - [ ] Domínio na Vercel

@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -49,8 +49,10 @@
       <a href="#como-funciona">Como funciona</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a class="top-phone" href="tel:08009440606"><small>Emergência 24h</small><b>0800 944 0606</b></a>
-    <a class="btn btn-yellow btn-sm" href="#cotacao" data-track="accar_cta_click" data-location="header">Fazer cotação</a>
+    <div class="top-actions">
+      <a class="top-call" href="tel:08009440606" aria-label="Emergência 24h: 0800 944 0606" title="Emergência 24h: 0800 944 0606"><svg class="ic"><use href="#i-phone"/></svg><span>0800 944 0606</span></a>
+      <a class="btn btn-ink btn-sm" href="#cotacao" data-track="accar_cta_click" data-location="header">Fazer cotação</a>
+    </div>
   </div>
 </header>
 
@@ -103,31 +105,35 @@
     </div>
   </section>
 
-  <!-- COBERTURAS PRINCIPAIS -->
+  <!-- COBERTURAS: blocos de tamanhos diferentes -->
   <section class="core" id="coberturas">
     <div class="wrap">
-      <div class="sec-head">
+      <div class="sec-head sec-head-row">
         <h2>O que importa quando o pior acontece.</h2>
-        <p>As três proteções que fazem diferença no seu bolso.</p>
+        <a class="link-more" href="#cotacao" data-track="accar_cta_click" data-location="coberturas">Fazer cotação</a>
       </div>
-      <div class="core-grid">
-        <article class="core-card core-main">
-          <svg class="core-ic" aria-hidden="true"><use href="#i-shield"/></svg>
+      <div class="bento">
+        <article class="tile t-red">
+          <svg class="tile-ic" aria-hidden="true"><use href="#i-shield"/></svg>
           <h3>Roubo e furto</h3>
-          <p class="core-value">100% <small>da FIPE</small></p>
+          <p class="tile-value">100%<small>da FIPE</small></p>
           <p>Seu veículo levado? Você recebe o valor integral da tabela FIPE.</p>
         </article>
-        <article class="core-card">
-          <svg class="core-ic" aria-hidden="true"><use href="#i-crash"/></svg>
+        <article class="tile t-dark">
+          <svg class="tile-ic" aria-hidden="true"><use href="#i-crash"/></svg>
           <h3>Colisão com perda total</h3>
-          <p class="core-value">100% <small>da FIPE</small></p>
-          <p>Também vale para incêndio causado por colisão.</p>
+          <p class="tile-value">100%<small>da FIPE</small></p>
+          <p>Vale também para incêndio causado por colisão.</p>
         </article>
-        <article class="core-card">
-          <svg class="core-ic" aria-hidden="true"><use href="#i-users"/></svg>
+        <article class="tile t-mist">
+          <svg class="tile-ic" aria-hidden="true"><use href="#i-users"/></svg>
           <h3>Danos a terceiros</h3>
-          <p class="core-value">R$ 30 mil</p>
-          <p>Cobertura de até R$&nbsp;30.000 em danos materiais causados a terceiros.</p>
+          <p class="tile-value">R$ 30 mil</p>
+          <p>Em danos materiais causados a terceiros.</p>
+        </article>
+        <article class="tile t-yellow">
+          <p class="tile-value">Sem análise de perfil.</p>
+          <p>Não importa a idade do condutor, quem dirige ou para que o carro é usado. A proteção é do veículo.</p>
         </article>
       </div>
     </div>
@@ -154,18 +160,12 @@
     </div>
   </section>
 
-  <!-- DIFERENCIAIS -->
+  <!-- DIFERENCIAIS: faixa compacta -->
   <section class="why">
-    <div class="wrap why-grid">
-      <div class="why-big">
-        <h2 class="why-title">Sem análise de perfil.</h2>
-        <p>Não importa a idade do condutor, quem dirige ou para que o carro é usado. A proteção é do veículo.</p>
-      </div>
-      <div class="why-list">
-        <div><h3>Cota de participação clara</h3><p>5% da FIPE, informada antes de você fechar. Sem surpresa na hora de usar.</p></div>
-        <div><h3>Associação com história</h3><p>Mais de 5 anos atuando com idoneidade e seriedade, com milhares de associados.</p></div>
-        <div><h3>Atendimento perto de você</h3><p>Unidades em Brasília, Governador Valadares, Betim, Contagem e Ipatinga.</p></div>
-      </div>
+    <div class="wrap why-row">
+      <div><h3>Cota de participação clara</h3><p>5% da FIPE, informada antes de você fechar.</p></div>
+      <div><h3>Associação com história</h3><p>Mais de 5 anos de atuação e milhares de associados.</p></div>
+      <div><h3>Atendimento perto de você</h3><p>Brasília, Gov. Valadares, Betim, Contagem e Ipatinga.</p></div>
     </div>
   </section>
 

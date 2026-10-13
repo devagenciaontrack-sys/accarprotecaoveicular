@@ -100,6 +100,9 @@
     }, { threshold: 0.15 }).observe(target);
   }
 
+  var bar = document.querySelector('.topbar');
+  if (bar) { var onScroll = function () { bar.classList.toggle('is-scrolled', window.scrollY > 8); }; window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); }
+
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
 })();

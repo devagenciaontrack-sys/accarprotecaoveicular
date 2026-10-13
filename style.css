@@ -551,3 +551,8 @@ h1 span{ display:block; }
   .faq summary{ padding:15px 0; }
   .final-copy{ padding:28px 22px; }
 }
+
+/* vídeo vertical (Shorts) */
+.video.video-short{ aspect-ratio:9 / 16; width:min(100%, 340px); justify-self:center; margin-inline:auto; }
+@media (min-width:960px){ .watch-grid{ grid-template-columns:minmax(0,1fr) auto; } .video.video-short{ width:340px; } }
+@media (max-width:620px){ .video.video-short{ width:min(100%, 300px); } }

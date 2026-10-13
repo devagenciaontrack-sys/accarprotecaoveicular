@@ -17,7 +17,7 @@ Landing page de conversão (HTML/CSS/JS puro, sem build). Conteúdo e cores do s
 `accar_cta_click`, `accar_whatsapp_click`, `accar_instagram_click`, `accar_simulator_select`, `accar_video_play`, `accar_form_start`, `accar_form_submit`
 
 ## Pendências
-- [ ] ID do vídeo do YouTube em `data-video-id` (index.html, seção VÍDEO)
+- [x] Vídeo: Shorts E_hGtP4i5gk (formato vertical)
 - [ ] Depoimentos reais (seção CONFIANÇA: preencher e remover o atributo `hidden`)
 - [ ] Texto oficial da Política de Privacidade
 - [ ] Domínio na Vercel

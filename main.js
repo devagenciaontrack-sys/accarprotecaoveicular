@@ -55,7 +55,7 @@
       poster.disabled = true;
     } else {
       poster.classList.add('has-thumb');
-      poster.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg), url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
+      poster.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/oardefault.jpg), url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
       poster.addEventListener('click', function () {
         var f = document.createElement('iframe');
         f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';

@@ -30,7 +30,6 @@
       document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
     });
     if (focus) tab.focus();
-    if (window.matchMedia('(max-width: 899px)').matches) tab.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
   }
   tabs.forEach(function (t, i) {
     t.addEventListener('click', function () {

@@ -3,7 +3,8 @@
 Landing page de conversão (HTML/CSS/JS puro, sem build), inspirada no site antigo da AC Car.
 
 ## Estrutura
-1. Abertura: headline "100% da FIPE", CTA de cotação e WhatsApp, dupla de garotos-propaganda
+1. Abertura: headline "100% da FIPE" e campo em formato de placa Mercosul que leva ao formulário de cotação
+2. Faixa da dupla: "Pensou proteção, pensou AC Car"
 2. Vídeo do YouTube (carrega só no clique)
 3. Coberturas principais (roubo/furto, colisão PT, terceiros)
 4. Assistência 24h
@@ -14,10 +15,10 @@ Landing page de conversão (HTML/CSS/JS puro, sem build), inspirada no site anti
 9. Dúvidas, CTA final, rodapé com unidades
 
 ## Rastreamento (dataLayer / gtag / Meta Pixel)
-`accar_cta_click`, `accar_whatsapp_click`, `accar_instagram_click`, `accar_video_play`, `accar_form_start`, `accar_form_submit`
+`accar_cta_click`, `accar_whatsapp_click`, `accar_instagram_click`, `accar_video_play`, `accar_plate_submit`, `accar_form_start`, `accar_form_submit`
 
 ## Pendências
-- [ ] ID do vídeo do YouTube em `data-video-id` (index.html, seção VÍDEO)
+- [ ] ID do vídeo do YouTube em `data-video-id` (index.html, seção VÍDEO — o espaço já está pronto)
 - [ ] Depoimentos reais de associados (seção DEPOIMENTOS)
 - [ ] Texto oficial da Política de Privacidade
 - [ ] Tags do Google / Meta, se houver

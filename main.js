@@ -22,8 +22,6 @@
     var btn = box.querySelector('.video-poster');
     if (!id) {
       btn.disabled = true;
-      btn.style.cursor = 'default';
-      box.querySelector('.play').style.display = 'none';
     } else {
       btn.addEventListener('click', function () {
         var f = document.createElement('iframe');
@@ -72,6 +70,24 @@
         (d.get('placa') ? '\nPlaca: ' + d.get('placa') : '');
       track('accar_form_submit');
       window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    });
+  }
+
+  // Placa no topo: leva a placa para o formulário de cotação.
+  var plateForm = document.getElementById('form-placa');
+  var plateIn = document.getElementById('p-placa');
+  if (plateForm && plateIn) {
+    plateIn.addEventListener('input', function () {
+      var v = plateIn.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 7);
+      plateIn.value = v.length > 3 && /^[A-Z]{3}\d{4}$/.test(v) ? v.slice(0, 3) + '-' + v.slice(3) : v;
+    });
+    plateForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var placa = document.getElementById('f-placa');
+      if (placa) placa.value = plateIn.value;
+      track('accar_plate_submit', { has_plate: plateIn.value.length >= 7 });
+      document.getElementById('cotacao').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(function () { var n = document.getElementById('f-nome'); if (n) n.focus({ preventScroll: true }); }, 500);
     });
   }
 

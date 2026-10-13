@@ -13,8 +13,8 @@
 <link rel="icon" href="assets/icone.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -43,7 +43,7 @@
 
 <header class="topbar">
   <div class="wrap topbar-in">
-    <a href="#" class="logo" translate="no" aria-label="AC Car Proteção Veicular, início"><img src="assets/logo.png" alt="AC Car Proteção Veicular" width="300" height="126"></a>
+    <a href="#" class="logo" translate="no" aria-label="AC Car Proteção Veicular, início"><span class="logo-mark" role="img" aria-label="AC Car Proteção Veicular"></span></a>
     <nav class="nav" aria-label="Seções">
       <a href="#coberturas">Coberturas</a>
       <a href="#como-funciona">Como funciona</a>
@@ -56,39 +56,48 @@
 
 <main id="conteudo">
 
-  <!-- HERO -->
+  <!-- HERO: a placa do carro é o começo da cotação -->
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <h1>Roubo, furto ou colisão? <span>Você recebe 100% da FIPE.</span></h1>
-        <p class="lead">Proteção veicular sem análise de perfil, com assistência 24h e reboque de até 600&nbsp;km. Receba sua cotação pelo WhatsApp em poucos minutos.</p>
-        <div class="hero-actions">
-          <a class="btn btn-yellow btn-lg" href="#cotacao" data-track="accar_cta_click" data-location="hero">Quero minha cotação</a>
-          <a class="btn btn-wa btn-lg" href="https://wa.me/5561996297632?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20uma%20cota%C3%A7%C3%A3o%20de%20prote%C3%A7%C3%A3o%20veicular." target="_blank" rel="noopener" data-track="accar_whatsapp_click" data-location="hero"><svg class="ic"><use href="#i-wa"/></svg> Falar no WhatsApp</a>
-        </div>
-        <ul class="hero-proof" aria-label="Destaques">
-          <li><b>+5 anos</b> protegendo veículos</li>
-          <li><b>Milhares</b> de associados</li>
-          <li><b>5 unidades</b> no DF e em MG</li>
-        </ul>
-      </div>
-      <div class="hero-art">
-        <img class="hero-duo" src="assets/dupla.webp" alt="Garotos-propaganda da AC Car" width="760" height="683" fetchpriority="high" decoding="async">
-        <div class="hero-stamp" aria-hidden="true"><b>100%</b><span>da tabela FIPE</span></div>
+    <div class="wrap hero-in">
+      <h1>Roubo, furto ou colisão? Você recebe <span>100% da FIPE.</span></h1>
+      <p class="lead">Proteção veicular sem análise de perfil, com assistência 24h e reboque de até 600&nbsp;km. Comece pela placa.</p>
+
+      <form class="plate-form" id="form-placa" novalidate>
+        <label class="plate" for="p-placa">
+          <span class="plate-band" aria-hidden="true"><span class="plate-flag"></span>BRASIL</span>
+          <span class="sr-only">Placa do veículo</span>
+          <input id="p-placa" name="placa" maxlength="8" autocomplete="off" spellcheck="false" autocapitalize="characters" placeholder="ABC1D23" aria-describedby="plate-hint">
+        </label>
+        <button class="btn btn-yellow btn-lg" type="submit">Cotar meu carro</button>
+      </form>
+      <p class="plate-hint" id="plate-hint">Sem a placa à mão? <a href="#cotacao">Preencha os dados do veículo</a> ou <a href="https://wa.me/5561996297632?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20uma%20cota%C3%A7%C3%A3o%20de%20prote%C3%A7%C3%A3o%20veicular." target="_blank" rel="noopener" data-track="accar_whatsapp_click" data-location="hero">fale no WhatsApp</a>.</p>
+
+      <ul class="hero-proof" aria-label="Destaques">
+        <li><b>+5 anos</b> protegendo veículos</li>
+        <li><b>Milhares</b> de associados</li>
+        <li><b>5 unidades</b> no DF e em MG</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- A DUPLA -->
+  <section class="duo">
+    <div class="wrap duo-in">
+      <img class="duo-img" src="assets/dupla.webp" alt="Garotos-propaganda da AC Car" width="760" height="683" loading="lazy" decoding="async">
+      <div class="duo-copy">
+        <p class="duo-slogan">Pensou proteção, pensou AC&nbsp;Car.</p>
+        <a class="btn btn-white btn-lg" href="https://wa.me/5561996297632?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20uma%20cota%C3%A7%C3%A3o%20de%20prote%C3%A7%C3%A3o%20veicular." target="_blank" rel="noopener" data-track="accar_whatsapp_click" data-location="dupla"><svg class="ic"><use href="#i-wa"/></svg> Falar com um consultor</a>
       </div>
     </div>
   </section>
 
-  <!-- VÍDEO -->
+  <!-- VÍDEO: espaço pronto. Para ativar, cole o ID do YouTube em data-video-id (youtube.com/watch?v=ID). -->
   <section class="video-sec" aria-labelledby="video-title">
     <div class="wrap video-in">
-      <h2 id="video-title">Pensou proteção, pensou AC&nbsp;Car.</h2>
-      <!-- TODO: colocar o ID do vídeo do YouTube em data-video-id (ex.: youtube.com/watch?v=ID) -->
+      <h2 id="video-title">Conheça a AC Car</h2>
       <div class="video" data-video-id="">
         <button class="video-poster" type="button" aria-label="Assistir ao vídeo da AC Car">
-          <img src="assets/dupla.webp" alt="" width="760" height="683" loading="lazy" decoding="async">
           <span class="play"><svg class="ic"><use href="#i-play"/></svg></span>
-          <span class="video-label">Assista e conheça a AC Car</span>
         </button>
       </div>
     </div>
@@ -121,7 +130,6 @@
           <p>Cobertura de até R$&nbsp;30.000 em danos materiais causados a terceiros.</p>
         </article>
       </div>
-      <img class="core-cars" src="assets/carros.webp" alt="" width="900" height="271" loading="lazy" decoding="async">
     </div>
   </section>
 
@@ -150,7 +158,7 @@
   <section class="why">
     <div class="wrap why-grid">
       <div class="why-big">
-        <p class="why-word">Sem<br>análise<br>de perfil.</p>
+        <h2 class="why-title">Sem análise de perfil.</h2>
         <p>Não importa a idade do condutor, quem dirige ou para que o carro é usado. A proteção é do veículo.</p>
       </div>
       <div class="why-list">
@@ -161,14 +169,17 @@
     </div>
   </section>
 
-  <!-- COMO FUNCIONA -->
+  <!-- COMO FUNCIONA: três paradas numa estrada -->
   <section class="steps" id="como-funciona">
     <div class="wrap">
       <div class="sec-head">
-        <h2>Proteção em três passos.</h2>
+        <h2>Da cotação à estrada em três paradas.</h2>
       </div>
+    </div>
+    <div class="road" aria-hidden="true"></div>
+    <div class="wrap">
       <ol class="steps-list">
-        <li><span class="n">1</span><h3>Peça sua cotação</h3><p>Preencha os dados do veículo. Leva menos de um minuto.</p></li>
+        <li><span class="n">1</span><h3>Peça sua cotação</h3><p>Comece pela placa ou pelos dados do veículo. Leva menos de um minuto.</p></li>
         <li><span class="n">2</span><h3>Fale com um consultor</h3><p>Um consultor da AC Car entra em contato com a cotação personalizada.</p></li>
         <li><span class="n">3</span><h3>Saia protegido</h3><p>Escolha, feche e rode tranquilo com assistência 24h.</p></li>
       </ol>
@@ -285,6 +296,6 @@
 
 <a class="sticky" href="#cotacao" data-track="accar_cta_click" data-location="sticky_mobile">Fazer minha cotação</a>
 
-<script src="main.js?v=1"></script>
+<script src="main.js?v=2"></script>
 </body>
 </html>

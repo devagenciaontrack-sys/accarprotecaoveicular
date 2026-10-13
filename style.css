@@ -390,3 +390,39 @@ h1 span{ display:block; }
 .cover-head .cover-card-red p{ color:#fff; margin:0; }
 .cover-head .cover-card-red p:last-child{ color:rgba(255,255,255,.9); }
 .cover-head .cover-card span{ margin:0; }
+
+/* ================= v6 ================= */
+/* hero: carros sobre fundo limpo, sem palco vermelho */
+.stage{ display:none; }
+.hero-visual{ padding:150px 0 24px; }
+.floor{ position:absolute; z-index:0; left:8%; right:4%; bottom:10px; height:70px; border-radius:50%; background:radial-gradient(closest-side, rgba(18,19,22,.16), rgba(18,19,22,0)); }
+.hero-cars{ width:108%; margin-left:-2%; filter:none; }
+.badge-24{ bottom:0; }
+@media (max-width:959px){ .hero-visual{ padding:150px 20px 24px; } .hero-cars{ width:100%; margin-left:0; } }
+@media (max-width:560px){ .hero-visual{ padding-top:8px; } .floor{ bottom:auto; top:70px; height:40px; } }
+
+/* faixa de confiança: uma linha simples, mesma altura */
+.trust{ display:grid; grid-template-columns:1fr 1fr; gap:0; margin-top:28px; border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#fff; }
+@media (min-width:1000px){ .trust{ grid-template-columns:repeat(4, 1fr); } }
+.trust li, .trust li:hover{ display:flex; align-items:center; gap:12px; padding:16px 18px; border-radius:0; background:#fff; }
+.trust li + li{ border-left:1px solid var(--line); }
+@media (max-width:999px){ .trust li:nth-child(3){ border-left:0; } .trust li:nth-child(n+3){ border-top:1px solid var(--line); } }
+.trust-ic{ width:auto; height:auto; background:none; box-shadow:none; border-radius:0; }
+.trust-ic .ic{ width:22px; height:22px; }
+.trust b{ font-size:15px; }
+.trust div span, .trust div a{ font-size:13.5px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.trust div a{ color:var(--red); font-weight:600; }
+@media (max-width:420px){ .trust li{ padding:14px; } .trust div span{ white-space:normal; } }
+
+/* coberturas: as três colunas com a mesma altura */
+@media (min-width:960px){ .cover-grid{ align-items:stretch; } }
+.cover-head{ align-content:start; }
+.cover-lists{ grid-template-rows:1fr; }
+.cover-col{ display:flex; flex-direction:column; }
+.cover-col .checks{ flex:1; display:flex; flex-direction:column; }
+.cover-col .checks li{ flex:1; align-items:center; min-height:48px; }
+.cover-card{ padding:13px 15px; }
+.cover-card-red{ padding:15px 16px 13px; }
+.cc-big{ font-size:38px; }
+.cover-cards{ gap:8px; margin:4px 0 8px; }
+.cover-col .checks li{ min-height:44px; }

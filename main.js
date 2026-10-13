@@ -46,7 +46,7 @@
     });
   });
 
-  // Vídeo do YouTube: o player só carrega no clique. Sem ID, o botão fica desativado.
+  // Vídeo do YouTube: cole o ID em data-video-id. A capa vem do próprio YouTube; o player só carrega no clique.
   var box = document.querySelector('.video[data-video-id]');
   if (box) {
     var id = box.getAttribute('data-video-id').trim();
@@ -54,6 +54,8 @@
     if (!id) {
       poster.disabled = true;
     } else {
+      poster.classList.add('has-thumb');
+      poster.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg), url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
       poster.addEventListener('click', function () {
         var f = document.createElement('iframe');
         f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
@@ -109,6 +111,19 @@
   var target = document.getElementById('cotacao');
   if (dock && target && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (en) { dock.classList.toggle('is-hidden', en[0].isIntersecting); }, { threshold: 0.2 }).observe(target);
+  }
+
+  // Menu: destaca a seção que está na tela.
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  if (links.length && 'IntersectionObserver' in window) {
+    var map = {};
+    links.forEach(function (a) { var s = document.querySelector(a.getAttribute('href')); if (s) map[s.id] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { links.forEach(function (a) { a.classList.remove('is-active'); }); map[en.target.id].classList.add('is-active'); }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    Object.keys(map).forEach(function (k) { io.observe(document.getElementById(k)); });
   }
 
   var ano = document.getElementById('ano');

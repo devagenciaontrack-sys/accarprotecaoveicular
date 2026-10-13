@@ -426,3 +426,30 @@ h1 span{ display:block; }
 .cc-big{ font-size:38px; }
 .cover-cards{ gap:8px; margin:4px 0 8px; }
 .cover-col .checks li{ min-height:44px; }
+
+/* ================= v7 ================= */
+/* unidades: colunas com a mesma altura */
+@media (min-width:960px){ .proof-grid{ align-items:stretch; } }
+.proof-copy{ display:flex; flex-direction:column; align-items:flex-start; gap:14px; }
+.visit-card{ margin-top:auto; width:100%; display:grid; grid-template-columns:auto 1fr; gap:6px 14px; padding:20px; border-radius:16px; background:var(--red); color:#fff; }
+.visit-card > .ic{ width:26px; height:26px; margin-top:2px; }
+.visit-card div{ display:grid; gap:2px; }
+.visit-card b{ font-size:17px; }
+.visit-card span{ font-size:14.5px; color:rgba(255,255,255,.88); }
+.visit-card .btn{ grid-column:1 / -1; justify-self:start; margin-top:8px; }
+@media (max-width:959px){ .visit-card{ margin-top:8px; } }
+.units{ display:flex; flex-direction:column; }
+.units li{ flex:1; }
+.btn-white-red{ background:#fff; color:var(--red); }
+.btn-white-red:hover{ background:var(--yellow); color:var(--ink); }
+.btn-white-red .ic{ width:19px; height:19px; color:var(--wa); }
+
+/* dúvidas: cartão nas cores da marca, alinhado com a lista */
+@media (min-width:960px){ .faq-grid{ align-items:stretch; } }
+.faq-side{ display:flex; flex-direction:column; gap:10px; }
+.help-card{ margin-top:auto; background:var(--red); color:rgba(255,255,255,.9); }
+.help-card .btn{ margin-top:6px; }
+.help-tel{ color:rgba(255,255,255,.85); }
+@media (max-width:959px){ .help-card{ margin-top:14px; } }
+.faq-list{ display:flex; flex-direction:column; }
+.faq details{ flex:1; }

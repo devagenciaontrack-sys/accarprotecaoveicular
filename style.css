@@ -94,7 +94,7 @@ h1 span{ display:block; }
 @media (min-width:561px){ .hero-visual{ padding-top:150px; } }
 .hero-stage{ position:absolute; left:4%; right:2%; bottom:2%; height:46%; border-radius:50%; background:radial-gradient(closest-side, rgba(225,0,15,.10), rgba(225,0,15,0)); }
 .hero-cars{ position:relative; width:118%; max-width:none; margin-left:-4%; height:auto; filter:drop-shadow(0 30px 24px rgba(18,19,22,.18)); }
-@media (max-width:959px){ .hero-cars{ width:112%; margin-left:-6%; } }
+@media (max-width:959px){ .hero-cars{ width:100%; margin-left:0; } }
 .status{ position:absolute; left:4%; top:0; z-index:2; width:min(270px, 62%); padding:16px 16px 12px; border-radius:var(--r); background:rgba(255,255,255,.96); box-shadow:0 20px 40px -24px rgba(18,19,22,.45), 0 0 0 1px var(--line); }
 .status-head{ display:flex; align-items:center; gap:8px; margin-bottom:8px; font-size:13px; font-weight:600; color:var(--ink); }
 .pulse{ width:8px; height:8px; border-radius:50%; background:var(--wa); box-shadow:0 0 0 0 rgba(31,175,85,.5); animation:pulse 2.2s infinite; }

@@ -556,3 +556,46 @@ h1 span{ display:block; }
 .video.video-short{ aspect-ratio:9 / 16; width:min(100%, 340px); justify-self:center; margin-inline:auto; }
 @media (min-width:960px){ .watch-grid{ grid-template-columns:minmax(0,1fr) auto; } .video.video-short{ width:340px; } }
 @media (max-width:620px){ .video.video-short{ width:min(100%, 300px); } }
+
+/* ================= vídeo mais vivo ================= */
+.watch{ position:relative; overflow:hidden; background:radial-gradient(60% 90% at 85% 50%, rgba(225,0,15,.35) 0%, rgba(225,0,15,0) 60%), radial-gradient(40% 60% at 0% 100%, rgba(225,0,15,.12), transparent 70%), #0F1013; }
+@media (min-width:960px){ .watch-grid{ grid-template-columns:minmax(0, 1fr) auto; gap:96px; max-width:1080px; } }
+.watch-tag{ display:inline-flex; align-items:center; gap:8px; margin-bottom:16px; padding:6px 12px; border-radius:999px; background:rgba(255,255,255,.08); font-size:13px; font-weight:600; color:#fff; }
+.live-dot{ width:8px; height:8px; border-radius:50%; background:var(--red); box-shadow:0 0 0 0 rgba(225,0,15,.6); animation:live 1.8s infinite; }
+@keyframes live{ 70%{ box-shadow:0 0 0 8px rgba(225,0,15,0); } 100%{ box-shadow:0 0 0 0 rgba(225,0,15,0); } }
+.watch h2{ font-size:clamp(28px, 3.2vw, 40px); }
+.watch .watch-list{ display:grid; gap:10px; margin:24px 0 28px; }
+.watch .watch-list li{ display:flex; align-items:center; gap:14px; padding:12px 14px; border-radius:14px; background:rgba(255,255,255,.05); box-shadow:inset 0 0 0 1px rgba(255,255,255,.08); transition:background-color .2s, transform .2s var(--ease); }
+.watch .watch-list li:hover{ background:rgba(255,255,255,.09); transform:translateX(4px); }
+.watch .watch-list li::before{ display:none; }
+.wl-ic{ flex:none; display:grid; place-items:center; width:40px; height:40px; border-radius:11px; background:var(--red); color:#fff; }
+.wl-ic .ic{ width:20px; height:20px; }
+.watch .watch-list b{ display:block; color:#fff; font-size:15.5px; }
+.watch .watch-list span:not(.wl-ic){ display:block; font-size:13.5px; color:rgba(255,255,255,.62); }
+.watch-cta{ display:flex; flex-wrap:wrap; gap:10px; }
+@media (max-width:560px){ .watch-cta .btn{ width:100%; } }
+
+.watch-media{ position:relative; justify-self:center; padding:24px 34px; }
+.media-glow{ position:absolute; inset:10% 0; border-radius:50%; background:radial-gradient(closest-side, rgba(225,0,15,.55), rgba(225,0,15,0)); filter:blur(30px); }
+.media-card{ position:absolute; left:58px; right:10px; top:44px; bottom:4px; border-radius:24px; background:var(--red); transform:rotate(6deg); }
+.watch-media .video{ position:relative; z-index:1; box-shadow:0 40px 80px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.12); border-radius:22px; }
+.watch-media .play{ animation:pulsebtn 2.4s infinite; }
+@keyframes pulsebtn{ 0%{ box-shadow:0 0 0 0 rgba(255,255,255,.45); } 70%{ box-shadow:0 0 0 18px rgba(255,255,255,0); } 100%{ box-shadow:0 0 0 0 rgba(255,255,255,0); } }
+.chip-float{ position:absolute; z-index:2; display:flex; align-items:center; gap:10px; padding:10px 14px; border-radius:14px; background:#fff; box-shadow:0 18px 36px -16px rgba(0,0,0,.6); animation:floaty 5s ease-in-out infinite; }
+.chip-float .ic{ width:30px; height:30px; padding:6px; border-radius:9px; background:var(--red-tint); color:var(--red); }
+.chip-float span{ display:grid; font-size:12.5px; line-height:1.25; color:var(--muted); }
+.chip-float b{ font-size:14px; color:var(--ink); }
+.chip-a{ left:-28px; top:22%; }
+.chip-b{ right:-34px; bottom:16%; animation-delay:-2.5s; }
+.chip-b .ic{ background:var(--yellow); color:var(--ink); }
+@keyframes floaty{ 50%{ transform:translateY(-8px); } }
+@media (max-width:620px){
+  .watch-media{ padding:16px 20px 8px; }
+  .media-card{ left:40px; right:4px; }
+  .chip-a{ left:-6px; top:14%; }
+  .chip-b{ right:-6px; bottom:10%; }
+  .watch .watch-list{ display:grid; }
+}
+@media (prefers-reduced-motion:reduce){ .chip-float, .watch-media .play, .live-dot{ animation:none; } }
+@media (max-width:959px){ .watch-media{ width:min(100%, 340px); } .watch-media .video.video-short{ width:100%; } }
+@media (max-width:620px){ .chip-float{ padding:8px 10px; } .chip-float .ic{ width:26px; height:26px; } .chip-float span{ font-size:11.5px; } .chip-float b{ font-size:13px; } }

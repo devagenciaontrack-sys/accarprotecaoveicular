@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 
@@ -166,19 +166,29 @@
   <section class="watch" aria-labelledby="watch-title">
     <div class="wrap watch-grid">
       <div class="watch-copy">
-        <h2 id="watch-title">Em um minuto, entenda por que milhares de motoristas escolheram a AC&nbsp;Car.</h2>
+        <p class="watch-tag"><span class="live-dot" aria-hidden="true"></span>Assista em 1 minuto</p>
+        <h2 id="watch-title">Entenda por que milhares de motoristas escolheram a AC&nbsp;Car.</h2>
         <ul class="watch-list">
-          <li>Como funciona a proteção veicular</li>
-          <li>O que acontece em caso de roubo ou batida</li>
-          <li>Como acionar a assistência 24h</li>
+          <li><span class="wl-ic"><svg class="ic"><use href="#i-shield"/></svg></span><div><b>Como funciona a proteção</b><span>100% da FIPE, sem análise de perfil</span></div></li>
+          <li><span class="wl-ic"><svg class="ic"><use href="#s-crash"/></svg></span><div><b>Roubo ou batida</b><span>O que acontece e como você é ressarcido</span></div></li>
+          <li><span class="wl-ic"><svg class="ic"><use href="#s-tow"/></svg></span><div><b>Assistência 24h</b><span>Como acionar o reboque pelo 0800</span></div></li>
         </ul>
-        <a class="btn btn-white" href="#cotacao" data-track="accar_cta_click" data-location="video">Fazer minha cotação</a>
+        <div class="watch-cta">
+          <a class="btn btn-red btn-lg" href="#cotacao" data-track="accar_cta_click" data-location="video">Fazer minha cotação</a>
+          <a class="btn btn-onred btn-lg" href="https://wa.me/5561996297632?text=Ol%C3%A1!%20Vi%20o%20v%C3%ADdeo%20no%20site%20e%20quero%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener" data-track="accar_whatsapp_click" data-location="video"><svg class="ic ic-wa"><use href="#i-wa"/></svg> Tirar dúvida</a>
+        </div>
       </div>
-      <div class="video video-short" data-video-id="E_hGtP4i5gk">
-        <button class="video-poster" type="button" aria-label="Assistir ao vídeo da AC Car">
-          <span class="play"><svg class="ic"><use href="#i-play"/></svg></span>
-          <span class="video-soon">Vídeo em breve</span>
-        </button>
+      <div class="watch-media">
+        <span class="media-glow" aria-hidden="true"></span>
+        <span class="media-card" aria-hidden="true"></span>
+        <div class="video video-short" data-video-id="E_hGtP4i5gk">
+          <button class="video-poster" type="button" aria-label="Assistir ao vídeo da AC Car">
+            <span class="play"><svg class="ic"><use href="#i-play"/></svg></span>
+            <span class="video-soon">Vídeo em breve</span>
+          </button>
+        </div>
+        <p class="chip-float chip-a" aria-hidden="true"><svg class="ic"><use href="#i-shield"/></svg><span><b>100% FIPE</b>roubo, furto e PT</span></p>
+        <p class="chip-float chip-b" aria-hidden="true"><svg class="ic"><use href="#s-tow"/></svg><span><b>Reboque 24h</b>até 600 km</span></p>
       </div>
     </div>
   </section>

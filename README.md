@@ -19,5 +19,5 @@ Landing page de conversão (HTML/CSS/JS puro, sem build). Conteúdo e cores do s
 ## Pendências
 - [x] Vídeo: Shorts E_hGtP4i5gk (formato vertical)
 - [ ] Depoimentos reais (seção CONFIANÇA: preencher e remover o atributo `hidden`)
-- [ ] Texto oficial da Política de Privacidade
+- [x] Política de Privacidade (padrão LGPD) — falta razão social, CNPJ e e-mail do DPO
 - [ ] Domínio na Vercel

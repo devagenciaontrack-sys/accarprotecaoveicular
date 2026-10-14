@@ -599,3 +599,36 @@ h1 span{ display:block; }
 @media (prefers-reduced-motion:reduce){ .chip-float, .watch-media .play, .live-dot{ animation:none; } }
 @media (max-width:959px){ .watch-media{ width:min(100%, 340px); } .watch-media .video.video-short{ width:100%; } }
 @media (max-width:620px){ .chip-float{ padding:8px 10px; } .chip-float .ic{ width:26px; height:26px; } .chip-float span{ font-size:11.5px; } .chip-float b{ font-size:13px; } }
+
+/* ================= topo mais vivo ================= */
+.hero{ position:relative; background:radial-gradient(45% 60% at 82% 38%, rgba(225,0,15,.10), transparent 70%), radial-gradient(30% 40% at 0% 0%, rgba(225,0,15,.06), transparent 70%), #fff; }
+.hero::before{ content:''; position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(18,19,22,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(18,19,22,.035) 1px, transparent 1px); background-size:44px 44px; -webkit-mask-image:radial-gradient(70% 70% at 70% 40%, #000 20%, transparent 75%); mask-image:radial-gradient(70% 70% at 70% 40%, #000 20%, transparent 75%); }
+.hero > *{ position:relative; }
+.h1-mark{ position:relative; display:inline-block; }
+.h1-mark svg{ position:absolute; left:0; bottom:-10px; width:100%; height:14px; fill:none; stroke:var(--red); stroke-width:5; stroke-linecap:round; stroke-dasharray:320; stroke-dashoffset:320; animation:draw 1s .5s var(--ease) forwards; }
+@keyframes draw{ to{ stroke-dashoffset:0; } }
+.car-glow{ position:absolute; z-index:0; left:20%; right:6%; top:38%; height:38%; border-radius:50%; background:radial-gradient(closest-side, rgba(225,0,15,.28), rgba(225,0,15,0)); filter:blur(18px); }
+.speed{ position:absolute; z-index:0; left:-6%; top:46%; width:46%; height:30%; overflow:hidden; pointer-events:none; }
+.speed i{ position:absolute; left:0; height:2px; border-radius:2px; background:linear-gradient(90deg, rgba(225,0,15,0), rgba(225,0,15,.55)); animation:speed 2.4s linear infinite; }
+.speed i:nth-child(1){ top:10%; width:40%; animation-delay:0s; }
+.speed i:nth-child(2){ top:30%; width:60%; animation-delay:-.6s; }
+.speed i:nth-child(3){ top:50%; width:35%; animation-delay:-1.2s; }
+.speed i:nth-child(4){ top:70%; width:55%; animation-delay:-1.8s; }
+.speed i:nth-child(5){ top:88%; width:30%; animation-delay:-.9s; }
+@keyframes speed{ from{ transform:translateX(-110%); opacity:0; } 20%{ opacity:1; } to{ transform:translateX(220%); opacity:0; } }
+.hero-cars{ animation:drive-in .9s var(--ease) both; }
+@keyframes drive-in{ from{ transform:translateX(40px); opacity:0; } to{ transform:none; opacity:1; } }
+.badge-24{ animation:floaty 5s ease-in-out infinite; }
+.status{ animation:floaty 6s ease-in-out infinite; animation-delay:-3s; }
+.trust-ic{ display:grid; place-items:center; width:38px; height:38px; border-radius:11px; background:var(--red-tint); }
+.trust-ic .ic{ width:19px; height:19px; }
+.trust li{ transition:background-color .2s; }
+.trust li:hover{ background:#FFF7F7; }
+.trust li:hover .trust-ic{ background:var(--red); color:#fff; }
+@media (max-width:620px){ .speed{ display:none; } .status{ animation:none; } .h1-mark svg{ bottom:-6px; height:10px; } }
+@media (prefers-reduced-motion:reduce){ .speed, .hero-cars, .badge-24, .status{ animation:none; } .h1-mark svg{ animation:none; stroke-dashoffset:0; } }
+
+/* menos é mais */
+.hero::before{ display:none; }
+.speed{ display:none; }
+.car-glow{ opacity:.7; }

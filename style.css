@@ -632,3 +632,14 @@ h1 span{ display:block; }
 .hero::before{ display:none; }
 .speed{ display:none; }
 .car-glow{ opacity:.7; }
+
+/* rodapé: contatos, redes e crédito da agência */
+.rod{ padding-top:40px; }
+.rod-top{ display:grid; gap:24px; padding-bottom:24px; } @media (min-width:800px){ .rod-top{ grid-template-columns:1fr auto; align-items:end; gap:48px; } }
+.rod-brand{ display:grid; gap:10px; justify-items:start; }
+.rod-soc{ display:flex; gap:10px; }
+.rod-soc a{ display:grid; place-items:center; width:46px; height:46px; border-radius:50%; border:1px solid var(--line); color:var(--ink); transition:background-color .2s, border-color .2s, color .2s, transform .2s; }
+.rod-soc a:hover{ background:var(--red); border-color:var(--red); color:#fff; transform:translateY(-2px); }
+.rod-soc svg{ width:20px; height:20px; }
+.rod-bot{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; }
+.rod-credit b{ font-weight:600; transition:color .2s; } .rod-credit:hover b{ color:var(--red); }
